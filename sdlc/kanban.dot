@@ -1,0 +1,80 @@
+/* edit between the comments; move between the subgraphs
+ * ...invisible edges is buggy (EG: int_GE -> GEI); need to find a way to "wrap" nodes within subgraphs without ruining the layout
+ *
+ * https://stackoverflow.com/a/15678636
+ * we could edit the shell script to equalise the subgraph widths prior to compilation
+ * we could edit the shell script to "wrap" nodes within subgraphs prior to compilation; once we figure out how to "wrap" in the first place...
+ */
+strict digraph main {
+	graph [
+		layout=dot
+		rankdir=TB
+		fontname=Monospace
+		bgcolor="#666666"
+		style=filled
+	]
+	node [
+		fontname=Monospace
+		style=filled
+		fontsize=16
+		fontcolor="#000000"
+		shape=record
+	]
+	edge [
+		labelfontcolor="#FF0000"
+		color="#000000"
+	]
+	subgraph cluster_pending {
+		graph [
+			color="#FFFF00"
+			label="PENDING"
+		]
+		node[fillcolor="#FF00FF"]
+		/****************************************************************/
+		int_GE [label="{<f0> \<Interface\>\nGameEngine| <f1> fields| <f2>methods| <f3> }"]
+		int_P [label="{<f0> \<Interface\>\nPlayer| <f1> fields| <f2>methods| <f3> }"]
+		int_C [label="{<f0> \<Interface\>\nCoin| <f1> fields| <f2>methods| <f3> }"]
+		GEI [label="{<f0> GameEngineImpl| <f1> fields| <f2>methods| <f3> }"]
+		SP [label="{<f0> SimplePlayer| <f1> fields| <f2>methods| <f3> }"]
+		CI [label="{<f0> CoinImpl| <f1> fields| <f2>methods| <f3> }"]
+		/****************************************************************/
+		edge [style=invis]
+		/****************************************************************/
+		/****************************************************************/
+		cluster_pending_point [shape=point style=invis]
+	}
+	subgraph cluster_hacking {
+		graph [
+			color="#FF00FF"
+			label="HACKING"
+		]
+		node[fillcolor="#00FFFF"]
+		/****************************************************************/
+		comp_C [label="{<f0> \<Component\>\nController| <f1> fields| <f2>methods| <f3> }"]
+		comp_V [label="{<f0> \<Component\>\nView| <f1> fields| <f2>methods| <f3> }"]
+		/****************************************************************/
+		edge [style=invis]
+		/****************************************************************/
+		/****************************************************************/
+		node [style=invis]
+		cluster_hacking_point [shape=point]
+	}
+	subgraph cluster_hacked {
+		graph [
+			color="#00FFFF"
+			label="HACKED"
+		]
+		node[fillcolor="#00FF00"]
+		/****************************************************************/
+		C [label="{<f0> Client| <f1> fields| <f2>methods| <f3> }"]
+		TH [label="{<f0> TestHarness| <f1> fields| <f2>methods| <f3> }"]
+		/****************************************************************/
+		edge [style=invis]
+		/****************************************************************/
+		/****************************************************************/
+		node [style=invis]
+		cluster_hacked_point [shape=point]
+	}
+	edge [style=invis]
+	cluster_pending_point -> cluster_hacking_point -> cluster_hacked_point
+}/*
