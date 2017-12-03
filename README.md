@@ -12,7 +12,7 @@ Projects:
 1. Java-based Android alarm clock & calendar & ETC c̄ an "I'm not here" feature & custom widgets & ETC.
 1. Java-based Android file manager.
 1. C(++)-based game.
-1. Haskell-based Android app.
+1. [Haskell](https://wiki.haskell.org/Android)-based Android app.
 1. Linux From Scratch
 
 We could do inline C(++) within a Java wrapper; I think the [NDK](https://developer.android.com/ndk) uses `gcc`, so we could use `cpp` for "portable" inline assembly, defaulting on C(++).
