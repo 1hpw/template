@@ -17,3 +17,4 @@ Projects:
 
 We could do inline C(++) within a Java wrapper; I think the [NDK](https://developer.android.com/ndk) uses `gcc`, so we could use `cpp` for "portable" inline assembly, defaulting on C(++).
 <br>*Oracle either paid Google to use Java in the most inconvenient way possible, or Google employees own shares in Oracle; either way, I'd rather not use Java/JVM/ETC as much as possible...Linux doesn't require every"-thing" to be written/wrapped in C!!*
+<br>**What about Go?!? Google is the most retarded organisation; they support other another organisations' langauge over their own!?!**
