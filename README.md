@@ -1,7 +1,7 @@
 Is this how we will do it?
 1. Mockup
 1. UML
-1. [Scrumban](https://en.wikipedia.org/wiki/Scrumban#The_board...) c̄ stand-up meetings
+1. [Scrumban](https://en.wikipedia.org/wiki/Scrumban#The_board...) c̄ [Scrumeetings](https://en.wikipedia.org/wiki/Stand-up_meeting#Three_Questions)
 	1. Pending
 	1. Hacking (& [Testing](https://en.wikipedia.org/wiki/Test-driven_development))
 	1. Hacked
