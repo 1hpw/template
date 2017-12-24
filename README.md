@@ -1,6 +1,6 @@
 Is this how we will do it?
-1. Mockup
-1. UML
+1. [Mockup](https://en.wikipedia.org/wiki/User_interface_markup_language)
+1. [UML](https://en.wikipedia.org/wiki/DOT_(graph_description_language))
 1. [Scrumban](https://en.wikipedia.org/wiki/Scrumban#The_board...) c̄ [Scrumeetings](https://en.wikipedia.org/wiki/Stand-up_meeting#Three_Questions)
 	1. Pending
 	1. Hacking (& [Testing](https://en.wikipedia.org/wiki/Test-driven_development))
